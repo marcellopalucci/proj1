@@ -8,8 +8,8 @@
 
 /*
 Please fill in the following
- Student Name:
- Date:
+ Student Name: Marcello Palucci
+ Date: 9/29/2024
 
 ECE 2035 Project 1-2
 
@@ -57,11 +57,182 @@ int main(int argc, char *argv[]) {
      printf("Sample debugging print statement.\n");
   }
 
-
+  
   /* Your icon matching code goes here */
+  int FOUND = 0;
+  int candOffset_0 = 0;
+  int candOffset_1 = 144;
+  int candOffset_2 = 288;
+  int candOffset_3 = 432;
+  int candOffset_4 = 576;
+  int candOffset_5 = 720;
+  int candOffset_6 = 864;
+  int candOffset_7 = 1008;
+  int testPixel;
+  
+
+  for(int i = 0; i < IconSize; i++) {
+    testPixel = Candidates[candOffset_1 + i];
+    if (Candidates[candOffset_0 + i] == Pattern[i]) {
+      if (Candidates[candOffset_1 + i] == Pattern[i]) {
+        continue;
+      } else if (Candidates[candOffset_2 + i] == Pattern[i]) {
+        continue;
+      } else if (Candidates[candOffset_3 + i] == Pattern[i]) {
+        continue;
+      }else if (Candidates[candOffset_4 + i] == Pattern[i]) {
+        continue;
+      }else if (Candidates[candOffset_5 + i] == Pattern[i]) {
+        continue;
+      }else if (Candidates[candOffset_6 + i] == Pattern[i]) {
+        continue;
+      }else if (Candidates[candOffset_7 + i] == Pattern[i]) {
+        continue;
+      } else {
+        Match = 0;
+        break;
+      }
+    } else if (Candidates[candOffset_1 + i] == Pattern[i]) {
+      if (Candidates[candOffset_0 + i] == Pattern[i]) {
+        continue;
+      } else if (Candidates[candOffset_2 + i] == Pattern[i]) {
+        continue;
+      } else if (Candidates[candOffset_3 + i] == Pattern[i]) {
+        continue;
+      }else if (Candidates[candOffset_4 + i] == Pattern[i]) {
+        continue;
+      }else if (Candidates[candOffset_5 + i] == Pattern[i]) {
+        continue;
+      }else if (Candidates[candOffset_6 + i] == Pattern[i]) {
+        continue;
+      }else if (Candidates[candOffset_7 + i] == Pattern[i]) {
+        continue;
+      } else {
+        Match = 1;
+        break;
+      }
+    } else if (Candidates[candOffset_2 + i] == Pattern[i]) {
+      if (Candidates[candOffset_0 + i] == Pattern[i]) {
+        continue;
+      } else if (Candidates[candOffset_1 + i] == Pattern[i]) {
+        continue;
+      } else if (Candidates[candOffset_3 + i] == Pattern[i]) {
+        continue;
+      }else if (Candidates[candOffset_4 + i] == Pattern[i]) {
+        continue;
+      }else if (Candidates[candOffset_5 + i] == Pattern[i]) {
+        continue;
+      }else if (Candidates[candOffset_6 + i] == Pattern[i]) {
+        continue;
+      }else if (Candidates[candOffset_7 + i] == Pattern[i]) {
+        continue;
+      } else {
+        Match = 2;
+        break;
+      }
+    } else if (Candidates[candOffset_3 + i] == Pattern[i]) {
+      if (Candidates[candOffset_0 + i] == Pattern[i]) {
+        continue;
+      } else if (Candidates[candOffset_1 + i] == Pattern[i]) {
+        continue;
+      } else if (Candidates[candOffset_2 + i] == Pattern[i]) {
+        continue;
+      }else if (Candidates[candOffset_4 + i] == Pattern[i]) {
+        continue;
+      }else if (Candidates[candOffset_5 + i] == Pattern[i]) {
+        continue;
+      }else if (Candidates[candOffset_6 + i] == Pattern[i]) {
+        continue;
+      }else if (Candidates[candOffset_7 + i] == Pattern[i]) {
+        continue;
+      } else {
+        Match = 3;
+        break;
+      }
+    } else if (Candidates[candOffset_4 + i] == Pattern[i]) {
+      if (Candidates[candOffset_0 + i] == Pattern[i]) {
+        continue;
+      } else if (Candidates[candOffset_1 + i] == Pattern[i]) {
+        continue;
+      } else if (Candidates[candOffset_2 + i] == Pattern[i]) {
+        continue;
+      }else if (Candidates[candOffset_3 + i] == Pattern[i]) {
+        continue;
+      }else if (Candidates[candOffset_5 + i] == Pattern[i]) {
+        continue;
+      }else if (Candidates[candOffset_6 + i] == Pattern[i]) {
+        continue;
+      }else if (Candidates[candOffset_7 + i] == Pattern[i]) {
+        continue;
+      } else {
+        Match = 4;
+        break;
+      }
+    } else if (Candidates[candOffset_5 + i] == Pattern[i]) {
+      if (Candidates[candOffset_0 + i] == Pattern[i]) {
+        continue;
+      } else if (Candidates[candOffset_1 + i] == Pattern[i]) {
+        continue;
+      } else if (Candidates[candOffset_2 + i] == Pattern[i]) {
+        continue;
+      }else if (Candidates[candOffset_3 + i] == Pattern[i]) {
+        continue;
+      }else if (Candidates[candOffset_4 + i] == Pattern[i]) {
+        continue;
+      }else if (Candidates[candOffset_6 + i] == Pattern[i]) {
+        continue;
+      }else if (Candidates[candOffset_7 + i] == Pattern[i]) {
+        continue;
+      } else {
+        Match = 5;
+        break;
+      }
+    } else if (Candidates[candOffset_6 + i] == Pattern[i]) {
+      if (Candidates[candOffset_0 + i] == Pattern[i]) {
+        continue;
+      } else if (Candidates[candOffset_1 + i] == Pattern[i]) {
+        continue;
+      } else if (Candidates[candOffset_2 + i] == Pattern[i]) {
+        continue;
+      }else if (Candidates[candOffset_3 + i] == Pattern[i]) {
+        continue;
+      }else if (Candidates[candOffset_4 + i] == Pattern[i]) {
+        continue;
+      }else if (Candidates[candOffset_5 + i] == Pattern[i]) {
+        continue;
+      }else if (Candidates[candOffset_7 + i] == Pattern[i]) {
+        continue;
+      } else {
+        Match = 6;
+        break;
+      }
+    } else if (Candidates[candOffset_7 + i] == Pattern[i]) {
+      if (Candidates[candOffset_0 + i] == Pattern[i]) {
+        continue;
+      } else if (Candidates[candOffset_1 + i] == Pattern[i]) {
+        continue;
+      } else if (Candidates[candOffset_3 + i] == Pattern[i]) {
+        continue;
+      }else if (Candidates[candOffset_3 + i] == Pattern[i]) {
+        continue;
+      }else if (Candidates[candOffset_4 + i] == Pattern[i]) {
+        continue;
+      }else if (Candidates[candOffset_5 + i] == Pattern[i]) {
+        continue;
+      }else if (Candidates[candOffset_6 + i] == Pattern[i]) {
+        continue;
+      } else {
+        Match = 7;
+        break;
+      }
+    } 
+
+  }
+
+
 
   // DELETE THE FOLLOWING LINE. It assigns a temp value so shell code works.
-  Match = 42; //<-- delete this
+  // Match = 42; //<-- delete this
 
   printf("The matching icon is %d\n", Match);
   exit(0);
