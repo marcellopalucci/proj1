@@ -30,7 +30,7 @@ Add code to find which of the eight candidates matches the pattern icon.
 #include <stdio.h>
 #include <stdlib.h>
 
-#define DEBUG 1 // RESET THIS TO 0 BEFORE SUBMITTING YOUR CODE
+#define DEBUG 0 // RESET THIS TO 0 BEFORE SUBMITTING YOUR CODE
 
 #define IconSize (12 * 12)
 #define NumCandidates 8
@@ -57,7 +57,6 @@ int main(int argc, char *argv[]) {
      printf("Sample debugging print statement.\n");
   }
 
-  
   /* Your icon matching code goes here */
   int *cand_0 = Candidates + 0;
   int *cand_1 = Candidates + 144;
@@ -67,14 +66,10 @@ int main(int argc, char *argv[]) {
   int *cand_5 = Candidates + 720;
   int *cand_6 = Candidates + 864;
   int *cand_7 = Candidates + 1008;
-  //int testPixel = 0;
-  int testruns = 0;
   
-
   for(int i = 0; i < IconSize; i++) {
     //int testPixel = Candidates[candOffset_1 + i];
     if (*(cand_0 + i) == Pattern[i]) {
-      testruns++;
       if (*(cand_1 + i) == Pattern[i]) {
         continue;
       } else if (*(cand_2 + i) == Pattern[i]) {
@@ -94,7 +89,6 @@ int main(int argc, char *argv[]) {
         break;
       }
     } else if (*(cand_1 + i) == Pattern[i]) {
-      testruns++;
       if (*(cand_0 + i) == Pattern[i]) {
         continue;
       } else if (*(cand_2 + i) == Pattern[i]) {
@@ -114,7 +108,6 @@ int main(int argc, char *argv[]) {
         break;
       }
     } else if (*(cand_2 + i) == Pattern[i]) {
-      testruns++;
       if (*(cand_0 + i) == Pattern[i]) {
         continue;
       } else if (*(cand_1 + i) == Pattern[i]) {
@@ -134,7 +127,6 @@ int main(int argc, char *argv[]) {
         break;
       }
     } else if (*(cand_3 + i) == Pattern[i]) {
-      testruns++;
       if (*(cand_0 + i) == Pattern[i]) {
         continue;
       } else if (*(cand_1 + i) == Pattern[i]) {
@@ -154,7 +146,6 @@ int main(int argc, char *argv[]) {
         break;
       }
     } else if (*(cand_4 + i) == Pattern[i]) {
-      testruns++;
       if (*(cand_0 + i) == Pattern[i]) {
         continue;
       } else if (*(cand_1 + i) == Pattern[i]) {
@@ -174,7 +165,6 @@ int main(int argc, char *argv[]) {
         break;
       }
     } else if (*(cand_5 + i) == Pattern[i]) {
-      testruns++;
       if (*(cand_0 + i) == Pattern[i]) {
         continue;
       } else if (*(cand_1 + i) == Pattern[i]) {
@@ -194,7 +184,6 @@ int main(int argc, char *argv[]) {
         break;
       }
     } else if (*(cand_6 + i) == Pattern[i]) {
-      testruns++;
       if (*(cand_0 + i) == Pattern[i]) {
         continue;
       } else if (*(cand_1 + i) == Pattern[i]) {
@@ -214,7 +203,6 @@ int main(int argc, char *argv[]) {
         break;
       }
     } else if (*(cand_7 + i) == Pattern[i]) {
-      testruns++;
       if (*(cand_0 + i) == Pattern[i]) {
         continue;
       } else if (*(cand_1 + i) == Pattern[i]) {
@@ -237,11 +225,6 @@ int main(int argc, char *argv[]) {
 
   }
 
-
-
-  // DELETE THE FOLLOWING LINE. It assigns a temp value so shell code works.
-  // Match = 42; //<-- delete this
-  printf("number of loops: %d\n", testruns);
   printf("The matching icon is %d\n", Match);
   exit(0);
 }
