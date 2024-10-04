@@ -58,6 +58,7 @@ int main(int argc, char *argv[]) {
   }
 
   /* Your icon matching code goes here */
+  //point to the base of each candidate
   int *cand_0 = Candidates + 0;
   int *cand_1 = Candidates + 144;
   int *cand_2 = Candidates + 288;
@@ -67,8 +68,17 @@ int main(int argc, char *argv[]) {
   int *cand_6 = Candidates + 864;
   int *cand_7 = Candidates + 1008;
   
+  //for loop which iterates through an IconSize of 144.
+  //first if statement checks for a black pixel in the Patter array, since
+  //we are not so interested in those pixels.
+  //each outer if statement compares the ith pixel in the Pattern array
+  //to an ith pixel of a Candidate's array. Then the inner loop checks whether
+  //that same pixel is found in another candidate, and if so
+  //continues the loop, otherwise break the loop and declare a match
   for(int i = 0; i < IconSize; i++) {
-    //int testPixel = Candidates[candOffset_1 + i];
+    if (Pattern[i] == 0) {
+      continue;
+    }
     if (*(cand_0 + i) == Pattern[i]) {
       if (*(cand_1 + i) == Pattern[i]) {
         continue;
