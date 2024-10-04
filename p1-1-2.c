@@ -59,175 +59,175 @@ int main(int argc, char *argv[]) {
 
   
   /* Your icon matching code goes here */
-  int candOffset_0 = 0;
-  int candOffset_1 = 144;
-  int candOffset_2 = 288;
-  int candOffset_3 = 432;
-  int candOffset_4 = 576;
-  int candOffset_5 = 720;
-  int candOffset_6 = 864;
-  int candOffset_7 = 1008;
+  int *cand_0 = Candidates + 0;
+  int *cand_1 = Candidates + 144;
+  int *cand_2 = Candidates + 288;
+  int *cand_3 = Candidates + 432;
+  int *cand_4 = Candidates + 576;
+  int *cand_5 = Candidates + 720;
+  int *cand_6 = Candidates + 864;
+  int *cand_7 = Candidates + 1008;
   //int testPixel = 0;
   int testruns = 0;
   
 
   for(int i = 0; i < IconSize; i++) {
     //int testPixel = Candidates[candOffset_1 + i];
-    if (Candidates[candOffset_0 + i] == Pattern[i]) {
+    if (*(cand_0 + i) == Pattern[i]) {
       testruns++;
-      if (Candidates[candOffset_1 + i] == Pattern[i]) {
+      if (*(cand_1 + i) == Pattern[i]) {
         continue;
-      } else if (Candidates[candOffset_2 + i] == Pattern[i]) {
+      } else if (*(cand_2 + i) == Pattern[i]) {
         continue;
-      } else if (Candidates[candOffset_3 + i] == Pattern[i]) {
+      } else if (*(cand_3 + i) == Pattern[i]) {
         continue;
-      }else if (Candidates[candOffset_4 + i] == Pattern[i]) {
+      }else if (*(cand_4 + i) == Pattern[i]) {
         continue;
-      }else if (Candidates[candOffset_5 + i] == Pattern[i]) {
+      }else if (*(cand_5 + i) == Pattern[i]) {
         continue;
-      }else if (Candidates[candOffset_6 + i] == Pattern[i]) {
+      }else if (*(cand_6 + i) == Pattern[i]) {
         continue;
-      }else if (Candidates[candOffset_7 + i] == Pattern[i]) {
+      }else if (*(cand_7 + i) == Pattern[i]) {
         continue;
       } else {
         Match = 0;
         break;
       }
-    } else if (Candidates[candOffset_1 + i] == Pattern[i]) {
+    } else if (*(cand_1 + i) == Pattern[i]) {
       testruns++;
-      if (Candidates[candOffset_0 + i] == Pattern[i]) {
+      if (*(cand_0 + i) == Pattern[i]) {
         continue;
-      } else if (Candidates[candOffset_2 + i] == Pattern[i]) {
+      } else if (*(cand_2 + i) == Pattern[i]) {
         continue;
-      } else if (Candidates[candOffset_3 + i] == Pattern[i]) {
+      } else if (*(cand_3 + i) == Pattern[i]) {
         continue;
-      }else if (Candidates[candOffset_4 + i] == Pattern[i]) {
+      }else if (*(cand_4 + i) == Pattern[i]) {
         continue;
-      }else if (Candidates[candOffset_5 + i] == Pattern[i]) {
+      }else if (*(cand_5 + i) == Pattern[i]) {
         continue;
-      }else if (Candidates[candOffset_6 + i] == Pattern[i]) {
+      }else if (*(cand_6 + i) == Pattern[i]) {
         continue;
-      }else if (Candidates[candOffset_7 + i] == Pattern[i]) {
+      }else if (*(cand_7 + i) == Pattern[i]) {
         continue;
       } else {
         Match = 1;
         break;
       }
-    } else if (Candidates[candOffset_2 + i] == Pattern[i]) {
+    } else if (*(cand_2 + i) == Pattern[i]) {
       testruns++;
-      if (Candidates[candOffset_0 + i] == Pattern[i]) {
+      if (*(cand_0 + i) == Pattern[i]) {
         continue;
-      } else if (Candidates[candOffset_1 + i] == Pattern[i]) {
+      } else if (*(cand_1 + i) == Pattern[i]) {
         continue;
-      } else if (Candidates[candOffset_3 + i] == Pattern[i]) {
+      } else if (*(cand_3 + i) == Pattern[i]) {
         continue;
-      }else if (Candidates[candOffset_4 + i] == Pattern[i]) {
+      }else if (*(cand_4 + i) == Pattern[i]) {
         continue;
-      }else if (Candidates[candOffset_5 + i] == Pattern[i]) {
+      }else if (*(cand_5 + i) == Pattern[i]) {
         continue;
-      }else if (Candidates[candOffset_6 + i] == Pattern[i]) {
+      }else if (*(cand_6 + i) == Pattern[i]) {
         continue;
-      }else if (Candidates[candOffset_7 + i] == Pattern[i]) {
+      }else if (*(cand_7 + i) == Pattern[i]) {
         continue;
       } else {
         Match = 2;
         break;
       }
-    } else if (Candidates[candOffset_3 + i] == Pattern[i]) {
+    } else if (*(cand_3 + i) == Pattern[i]) {
       testruns++;
-      if (Candidates[candOffset_0 + i] == Pattern[i]) {
+      if (*(cand_0 + i) == Pattern[i]) {
         continue;
-      } else if (Candidates[candOffset_1 + i] == Pattern[i]) {
+      } else if (*(cand_1 + i) == Pattern[i]) {
         continue;
-      } else if (Candidates[candOffset_2 + i] == Pattern[i]) {
+      } else if (*(cand_2 + i) == Pattern[i]) {
         continue;
-      }else if (Candidates[candOffset_4 + i] == Pattern[i]) {
+      }else if (*(cand_4 + i) == Pattern[i]) {
         continue;
-      }else if (Candidates[candOffset_5 + i] == Pattern[i]) {
+      }else if (*(cand_5 + i) == Pattern[i]) {
         continue;
-      }else if (Candidates[candOffset_6 + i] == Pattern[i]) {
+      }else if (*(cand_6 + i) == Pattern[i]) {
         continue;
-      }else if (Candidates[candOffset_7 + i] == Pattern[i]) {
+      }else if (*(cand_7 + i) == Pattern[i]) {
         continue;
       } else {
         Match = 3;
         break;
       }
-    } else if (Candidates[candOffset_4 + i] == Pattern[i]) {
+    } else if (*(cand_4 + i) == Pattern[i]) {
       testruns++;
-      if (Candidates[candOffset_0 + i] == Pattern[i]) {
+      if (*(cand_0 + i) == Pattern[i]) {
         continue;
-      } else if (Candidates[candOffset_1 + i] == Pattern[i]) {
+      } else if (*(cand_1 + i) == Pattern[i]) {
         continue;
-      } else if (Candidates[candOffset_2 + i] == Pattern[i]) {
+      } else if (*(cand_2 + i) == Pattern[i]) {
         continue;
-      }else if (Candidates[candOffset_3 + i] == Pattern[i]) {
+      }else if (*(cand_3 + i) == Pattern[i]) {
         continue;
-      }else if (Candidates[candOffset_5 + i] == Pattern[i]) {
+      }else if (*(cand_5 + i) == Pattern[i]) {
         continue;
-      }else if (Candidates[candOffset_6 + i] == Pattern[i]) {
+      }else if (*(cand_6 + i) == Pattern[i]) {
         continue;
-      }else if (Candidates[candOffset_7 + i] == Pattern[i]) {
+      }else if (*(cand_7 + i) == Pattern[i]) {
         continue;
       } else {
         Match = 4;
         break;
       }
-    } else if (Candidates[candOffset_5 + i] == Pattern[i]) {
+    } else if (*(cand_5 + i) == Pattern[i]) {
       testruns++;
-      if (Candidates[candOffset_0 + i] == Pattern[i]) {
+      if (*(cand_0 + i) == Pattern[i]) {
         continue;
-      } else if (Candidates[candOffset_1 + i] == Pattern[i]) {
+      } else if (*(cand_1 + i) == Pattern[i]) {
         continue;
-      } else if (Candidates[candOffset_2 + i] == Pattern[i]) {
+      } else if (*(cand_2 + i) == Pattern[i]) {
         continue;
-      }else if (Candidates[candOffset_3 + i] == Pattern[i]) {
+      }else if (*(cand_3 + i) == Pattern[i]) {
         continue;
-      }else if (Candidates[candOffset_4 + i] == Pattern[i]) {
+      }else if (*(cand_4 + i) == Pattern[i]) {
         continue;
-      }else if (Candidates[candOffset_6 + i] == Pattern[i]) {
+      }else if (*(cand_6 + i) == Pattern[i]) {
         continue;
-      }else if (Candidates[candOffset_7 + i] == Pattern[i]) {
+      }else if (*(cand_7 + i) == Pattern[i]) {
         continue;
       } else {
         Match = 5;
         break;
       }
-    } else if (Candidates[candOffset_6 + i] == Pattern[i]) {
+    } else if (*(cand_6 + i) == Pattern[i]) {
       testruns++;
-      if (Candidates[candOffset_0 + i] == Pattern[i]) {
+      if (*(cand_0 + i) == Pattern[i]) {
         continue;
-      } else if (Candidates[candOffset_1 + i] == Pattern[i]) {
+      } else if (*(cand_1 + i) == Pattern[i]) {
         continue;
-      } else if (Candidates[candOffset_2 + i] == Pattern[i]) {
+      } else if (*(cand_2 + i) == Pattern[i]) {
         continue;
-      }else if (Candidates[candOffset_3 + i] == Pattern[i]) {
+      }else if (*(cand_3 + i) == Pattern[i]) {
         continue;
-      }else if (Candidates[candOffset_4 + i] == Pattern[i]) {
+      }else if (*(cand_4 + i) == Pattern[i]) {
         continue;
-      }else if (Candidates[candOffset_5 + i] == Pattern[i]) {
+      }else if (*(cand_5 + i) == Pattern[i]) {
         continue;
-      }else if (Candidates[candOffset_7 + i] == Pattern[i]) {
+      }else if (*(cand_7 + i) == Pattern[i]) {
         continue;
       } else {
         Match = 6;
         break;
       }
-    } else if (Candidates[candOffset_7 + i] == Pattern[i]) {
+    } else if (*(cand_7 + i) == Pattern[i]) {
       testruns++;
-      if (Candidates[candOffset_0 + i] == Pattern[i]) {
+      if (*(cand_0 + i) == Pattern[i]) {
         continue;
-      } else if (Candidates[candOffset_1 + i] == Pattern[i]) {
+      } else if (*(cand_1 + i) == Pattern[i]) {
         continue;
-      } else if (Candidates[candOffset_3 + i] == Pattern[i]) {
+      } else if (*(cand_2 + i) == Pattern[i]) {
         continue;
-      }else if (Candidates[candOffset_3 + i] == Pattern[i]) {
+      }else if (*(cand_3 + i) == Pattern[i]) {
         continue;
-      }else if (Candidates[candOffset_4 + i] == Pattern[i]) {
+      }else if (*(cand_4 + i) == Pattern[i]) {
         continue;
-      }else if (Candidates[candOffset_5 + i] == Pattern[i]) {
+      }else if (*(cand_5 + i) == Pattern[i]) {
         continue;
-      }else if (Candidates[candOffset_6 + i] == Pattern[i]) {
+      }else if (*(cand_6 + i) == Pattern[i]) {
         continue;
       } else {
         Match = 7;
