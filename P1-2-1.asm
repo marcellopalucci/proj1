@@ -8,7 +8,7 @@
 
 # HW2-2
 # Student Name: Marcello Palucci
-# Date:
+# Date: 10/5/2024
 #
 #     I c o n   M a t c h
 #
@@ -18,12 +18,12 @@
 # CHANGE LOG: brief description of changes made from P1-2-shell.asm
 # to this version of code.
 # Date  Modification
-# 10/5	Initial code started 
-# 10/6  Use only one register to compare to Pattern
+# 10/5 initial coding
+
 #===========================================================================
 
 .data
-CandBase: 	.alloc 1152
+CandBase: 		.alloc 1152
 PatternBase:	.alloc 144
 
 .text
@@ -51,56 +51,41 @@ IconMatch:	addi	$1, $0, CandBase	# point to base of Candidates
 	# submitting your code (otherwise it will count against    #
 	# your static and dynamic instruction counts)              #
 	############################################################
+	#
 	
-	addi	$8, $0, 0					#holds the matching candidate
-	addi	$18, $0, 0					#candidate array offset
-	addi 	$7, $0, 0					#px offset counter
-#	addi	$13, $0, 0					#delete?
-#	addi	$21, $0, CandBase
-	addi	$24, $0, 0
-	addi	$27, $0, 7					#holds the value 7 to check how far the pointer has gone
+	# your code goes here
 
+		addi 	$7, $0, 0				#px offset counter
+		#addi 	$8, $0, 0 				#boolean: px matches the Pattern
+		#addi	$9, $0, 1				#boolean: px matches another Cand
+		addi	$8, $0, 8
+
+	########## loop to skip over black px in Pattern ###########
 MLoop:	lw		$5, PatternBase($7)		#load PatternBase's offset
-#		addi 	$2, $7, PatternBase 	#set up patterBase debugger px locator
-#		swi		585						#call locator debugger
-#		addi	$24, $0, 0
+		addi 	$2, $7, PatternBase 	#set up patterBase debugger px locator
+		swi		585						#call locator debugger
+		bne 	$5, $0, Then			#if(patternBase[i] != 0) (ie if patternBase px is black then increment px offset)
 		addi 	$7, $7, 4 				#increment px offset counter by 4 bytes / i++ jump (take next line too j Mloop)
-		bne 	$5, $0, PtCmp			#if(patternBase[i] != 0) (ie if patternBase px is black then increment px offset)
-		addi	$18, $18, 4
-		j		MLoop
+		j		MLoop					
 
-PtCmp:	lw		$20, CandBase($18)
-#		addi 	$8, $8, 0
-#		add 	$2, $18, $21 			#set up patterBase debugger px locator
-#		swi		585	
-		addi	$18, $18, 576
-		beq		$5, $20, CnCmp
-		addi	$8, $8, 1
-#		addi	$13, $0, 4
-		addi	$24, $24, 1
-		j		PtCmp
-CnCmp:	lw		$5, CandBase($18)
-		beq		$27, $24, End
-#		slti	$25, $24, 7
-#		beq		$25 $0, End
-#		add 	$2, $18, $21 			#set up patterBase debugger px locator
-#		swi		585	
-		addi	$24, $24, 1
-		beq		$5, $20, SkipTo
-		addi	$18, $18, 576
-		j		CnCmp
-SkipTo:	beq		$27, $24, Reset
-		addi	$18, $18, 576
-		addi	$24, $24, 1
-#		add 	$2, $18, $21 			#set up patterBase debugger px locator
-#		swi		585	
-		j		SkipTo
-Reset:	addi	$18, $18, -4028
-#		add 	$2, $18, $21 			#set up patterBase debugger px locator
-#		swi		585
-		addi	$24, $0, 0
-		addi 	$8, $8, 0
-		j		MLoop
-End:    addi    $2, $8, 0               # REPLACE: guess the first icon
+	########### here we will begin to compare pixels ###########
+Then:	addi	$9, $7, CandBase		#reg 7 is j
+		
+outer:	lw		$10, CandBase($7)
+		addi 	$2, $9, 0			 	#set up patterBase debugger px locator
+		swi		585						#call locator debugger
+		bne		$5, $10, incJ			
+
+#chk0:	bne		$20,  
+
+#chk1:
+
+#chk2:
+
+incJ:	addi	$9, $9, 576		#nned to remove
+		addi	$7, $7, 576
+		j		outer
+
+Exit:	addi    $2, $0, 0               # REPLACE: guess the first icon
 		swi	544			# submit answer and check
 		jr	$31			# return to caller
