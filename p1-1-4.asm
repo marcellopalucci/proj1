@@ -99,7 +99,7 @@ Reset:	addi	$18, $18, -4028
 #		add 	$2, $18, $21 			#set up patterBase debugger px locator
 #		swi		585
 		addi	$24, $0, 0
-		addi 	$8, $8, 0
+		addi 	$8, $0, 0
 		j		MLoop
 End:    addi    $2, $8, 0               # REPLACE: guess the first icon
 		swi	544			# submit answer and check
